@@ -1,116 +1,137 @@
-/* ===== Reset básico ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-  background-color: #187280; 
-  color: #fff;
-  line-height: 1.6;
-  padding: 20px;
+    background-color: #F6F4EB;
+    margin: 0;
+    font-family: 'Nunito', sans-serif; 
+    font-weight: 400; 
+    line-height: 1.6;
+    color: #1a1a1a;
 }
 
-/* ===== Cabeçalho ===== */
-.head {
-  background-color: #0f5a63;
-  color: #fff;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+.logo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4682A9;
+    border-radius: 100%;
 }
 
-.head label {
-  font-size: 22px;
-  font-weight: bold;
+.logoTitulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFF;
+    
 }
 
-.head button {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: bold;
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #749BC2;
+    padding: 0.5rem;
 }
 
-.head button:hover {
-  background-color: #666;
-  color: white;
-  transform: translateY(-2px);
+.home-button {
+    background-color: #91C8E4; 
+    border: none;
+    padding: 1rem 2rem;
+    color: #F6F4EB;
+    border-radius: 24px;
+    font-size: large;
 }
 
-/* ===== Texto principal (seção azul) ===== */
+.home-button:hover {
+    cursor: pointer;
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+    background-color: #4682A9;
+    border: #F6F4EB 0.2rem solid;
+}
+
+.content {
+    padding: 2rem;
+}
+
 .textoPrincipal {
-  background-color: #a8c6ee63;
-  padding: 25px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-}
-
-.textoPrincipal h1 {
-  font-size: 26px;
-  margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
 }
 
 .textoPrincipal p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #f2f2f2;
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
 }
 
-/* ===== Cards dos outros tópicos ===== */
-.topicos {
-  background-color: #fff;
-  color: #000;
-  margin: 20px auto;           /* centraliza horizontalmente e espaço vertical */
-  padding: 20px;
-  border-radius: 12px;
-  width: 80%;                  /* menor que 100% para mostrar a borda */
-  display: block;              /* um abaixo do outro */
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  border: 2px solid #0f5a63;  /* borda visível combinando com cabeçalho */
-  transition: all 0.3s ease;
-  cursor: pointer;
-  min-height: 180px;           /* altura menor mas confortável */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --card-bg: #F6F4EB;
+    --card-light-blue: #91C8E4;
+    --card-medium-blue: #749BC2;
+    --card-dark-blue: #4682A9;
+    --card-font: 'Poppins', sans-serif; 
 }
 
-.topicos:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+.card-series-container {
+    display: grid;
+    /* Cria colunas responsivas: elas terão no mínimo 300px e se ajustarão ao espaço */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    font-family: var(--card-font);
+    width: 100%;
 }
 
-.topicos h3 {
-  margin-bottom: 10px;
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    border-top: 5px solid var(--card-dark-blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.topicos p {
-  font-size: 14px;
-  line-height: 1.5;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(70, 130, 169, 0.2);
 }
 
-/* ===== Imagem dentro do card ===== */
-.card-img {
-  width: 70px;
-  display: block;
-  margin: 0 auto 10px;
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--card-light-blue);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
-/* ===== Responsividade ===== */
-@media (max-width: 768px) {
-  .textoPrincipal, .topicos {
-    padding: 20px;
-  }
-  .topicos {
-    width: 90%;               /* ocupa quase toda a tela em mobile */
-  }
+.card-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--card-dark-blue);
+    margin: 0;
 }
+
+.card-header span {
+    background-color: var(--card-medium-blue);
+    color: var(--card-bg);
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex-shrink: 0; 
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--card-medium-blue);
+    margin: 0;
+}
+
