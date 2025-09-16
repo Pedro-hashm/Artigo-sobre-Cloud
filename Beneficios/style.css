@@ -7,15 +7,19 @@
 }
 
 body {
-  background-color: #187280; 
+  background-color: #F6F4EB; 
   color: #fff;
   line-height: 1.6;
-  padding: 20px;
+  padding: 0;
+  margin: 0;
 }
 
+.content {
+    padding: 2rem;
+}
 
 .head {
-  background-color: #0f5a63;
+  background-color: #749BC2;
   color: #fff;
   padding: 15px 20px;
   display: flex;
@@ -25,33 +29,57 @@ body {
   box-shadow: 0 3px 6px rgba(0,0,0,0.3);
 }
 
-.head label {
-  font-size: 22px;
-  font-weight: bold;
+.logo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #4682A9;
+    border-radius: 100%;
 }
 
-.head button {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: bold;
+.logoTitulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFF;
+    
 }
 
-.head button:hover {
-  background-color: #666;
-  transform: translateY(-2px);
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #749BC2;
+    padding: 0.5rem;
+}
+
+.home-button {
+    background-color: #91C8E4; 
+    border: none;
+    padding: 1rem 2rem;
+    color: #F6F4EB;
+    border-radius: 24px;
+    font-size: large;
+}
+
+.home-button:hover {
+    cursor: pointer;
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+    background-color: #4682A9;
+    border: #F6F4EB 0.2rem solid;
 }
 
 .textoPrincipal {
-  background-color: #7daae642;
+  background-color: #ffff;
   padding: 25px;
   margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  color: #000;
 }
 
 .textoPrincipal h1 {
@@ -63,7 +91,7 @@ body {
 .textoPrincipal p {
   font-size: 16px;
   line-height: 1.6;
-  color: #f2f2f2;
+  color: #000000;
   text-align: center;
 }
 
